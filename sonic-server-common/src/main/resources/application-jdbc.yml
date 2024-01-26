@@ -6,12 +6,12 @@ spring:
     # mysql username
     username: ${MYSQL_USERNAME:root}
     # mysql password
-    password: ${MYSQL_PASSWORD:Sonic!@#123}
-    schema:
-      - classpath:data.sql
+    password: ${MYSQL_PASSWORD:root}
   sql:
     init:
       mode: always
+      schema-locations:
+        - classpath:data.sql
 
 mybatis-plus:
   mapper-locations: classpath*:com/gitee/sunchenbin/mybatis/actable/mapping/*/*.xml
